@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity">
+
+    <ImageView
+        android:id="@+id/id_profilePageHomeIconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintEnd_toStartOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintTop_toTopOf="@+id/id_profilePageStatsIconImageView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/id_profilePageStatsIconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/id_profilePageProfileIconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintStart_toEndOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintTop_toTopOf="@+id/id_profilePageStatsIconImageView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/id_profilePageHomeIconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="@+id/id_profilePageHomeIconImageView"
+        app:layout_constraintStart_toStartOf="@+id/id_profilePageHomeIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/id_profilePageHomeIconImageView" />
+
+    <TextView
+        android:id="@+id/id_profilePageStatsIconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Stats"
+        app:layout_constraintEnd_toEndOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintStart_toStartOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/id_profilePageStatsIconImageView" />
+
+    <TextView
+        android:id="@+id/id_profilePageProfileIconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Profile"
+        app:layout_constraintEnd_toEndOf="@+id/id_profilePageProfileIconImageView"
+        app:layout_constraintStart_toStartOf="@+id/id_profilePageProfileIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/id_profilePageProfileIconImageView" />
+
+    <View
+        android:id="@+id/id_navigatorTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_profilePageStatsIconImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/black"/>
+
+    <ImageView
+        android:id="@+id/id_profilePageDisplayAvatarImageView"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_profilePageTitleTextView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/id_profilePageTitleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="My Profile"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/id_profileItemsRecyclerView"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/id_profilePageDisplayAvatarImageView" />
+
+    <Button
+        android:id="@+id/id_updateProfilePasswordButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="-10dp"
+        android:layout_marginLeft="-10dp"
+        android:layout_marginTop="10dp"
+        android:text="Change Password"
+        app:layout_constraintStart_toStartOf="@+id/id_profileItemsRecyclerView"
+        app:layout_constraintTop_toBottomOf="@+id/id_profileItemsRecyclerView" />
+
+    <Button
+        android:id="@+id/id_updateProfileImageButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="-10dp"
+        android:layout_marginRight="-10dp"
+        android:text="Change Profile Picture"
+        app:layout_constraintEnd_toEndOf="@+id/id_profileItemsRecyclerView"
+        app:layout_constraintTop_toTopOf="@+id/id_updateProfilePasswordButton" />
+
+    <Button
+        android:id="@+id/id_updateProfileDeleteUserButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Delete User"
+        app:layout_constraintStart_toStartOf="@+id/id_updateProfilePasswordButton"
+        app:layout_constraintTop_toBottomOf="@+id/id_updateProfilePasswordButton" />
+
+    <Button
+        android:id="@+id/id_profileSignOutButton"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="Sign Out"
+        app:layout_constraintEnd_toEndOf="@+id/id_updateProfileImageButton"
+        app:layout_constraintTop_toTopOf="@+id/id_updateProfileDeleteUserButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StartupActivity">
+
+
+    <Button
+        android:id="@+id/id_startupSignInButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="SIGN IN"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/id_startupSignInTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:text="Sign in for more features!"
+        app:layout_constraintBottom_toTopOf="@+id/id_startupSignInButton"
+        app:layout_constraintEnd_toEndOf="@+id/id_startupSignInButton"
+        app:layout_constraintStart_toStartOf="@+id/id_startupSignInButton" />
+
+    <View
+        android:id="@+id/id_navigatorTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_startupSignInTextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/black"/>
+
+    <ScrollView
+        android:id="@+id/id_startupScrollView"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_navigatorTopBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <NumberPicker
+                android:id="@+id/id_startupNumPicker2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/id_startupNumPicker1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/id_startupNumPickerNextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Next"
+                app:layout_constraintEnd_toStartOf="@+id/id_startupNumPicker2"
+                app:layout_constraintStart_toEndOf="@+id/id_startupNumPicker1"
+                app:layout_constraintTop_toBottomOf="@+id/id_startupNumPicker1" />
+
+            <NumberPicker
+                android:id="@+id/id_startupNumPicker3"
+                android:layout_width="250dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/id_startupNumPickerNextButton"
+                app:layout_constraintStart_toStartOf="@+id/id_startupNumPickerNextButton"
+                app:layout_constraintTop_toBottomOf="@+id/id_numberPickerCountyTextView" />
+
+            <Button
+                android:id="@+id/id_startupNumPickerFinalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Get Data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_startupNumPicker3" />
+
+            <TextView
+                android:id="@+id/id_numberPickerCountyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Select County:"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/id_startupNumPickerNextButton"
+                app:layout_constraintStart_toStartOf="@+id/id_startupNumPickerNextButton"
+                app:layout_constraintTop_toBottomOf="@+id/id_startupNumPickerNextButton" />
+
+            <TextView
+                android:id="@+id/id_numberPickerTimelineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Select Timeline:"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/id_startupNumPicker1"
+                app:layout_constraintEnd_toEndOf="@+id/id_startupNumPicker1"
+                app:layout_constraintStart_toStartOf="@+id/id_startupNumPicker1" />
+
+            <TextView
+                android:id="@+id/id_numberPickerStateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Select State:"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/id_startupNumPicker2"
+                app:layout_constraintEnd_toEndOf="@+id/id_startupNumPicker2"
+                app:layout_constraintStart_toStartOf="@+id/id_startupNumPicker2" />
+
+            <TextView
+                android:id="@+id/id_startupDataDisplayTextView"
+                android:layout_width="325dp"
+                android:layout_height="700dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="Data will appear here."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/id_startupNumPickerFinalButton"
+                app:layout_constraintStart_toStartOf="@+id/id_startupNumPickerFinalButton"
+                app:layout_constraintTop_toBottomOf="@+id/id_startupNumPickerFinalButton" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

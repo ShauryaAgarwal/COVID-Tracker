@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StatisticsActivity">
+
+    <ImageView
+        android:id="@+id/id_statsPageHomeIconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintEnd_toStartOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintTop_toTopOf="@+id/id_statsPageStatsIconImageView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/id_statsPageStatsIconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="36dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <ImageView
+        android:id="@+id/id_statsPageProfileIconImageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginLeft="75dp"
+        app:layout_constraintBottom_toBottomOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintStart_toEndOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintTop_toTopOf="@+id/id_statsPageStatsIconImageView"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <TextView
+        android:id="@+id/id_statsPageHomeIconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Home"
+        app:layout_constraintEnd_toEndOf="@+id/id_statsPageHomeIconImageView"
+        app:layout_constraintStart_toStartOf="@+id/id_statsPageHomeIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/id_statsPageHomeIconImageView" />
+
+    <TextView
+        android:id="@+id/id_statsPageStatsIconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Stats"
+        app:layout_constraintEnd_toEndOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintStart_toStartOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/id_statsPageStatsIconImageView" />
+
+    <TextView
+        android:id="@+id/id_statsPageProfileIconTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="Profile"
+        app:layout_constraintEnd_toEndOf="@+id/id_statsPageProfileIconImageView"
+        app:layout_constraintStart_toStartOf="@+id/id_statsPageProfileIconImageView"
+        app:layout_constraintTop_toBottomOf="@+id/id_statsPageProfileIconImageView" />
+
+    <View
+        android:id="@+id/id_navigatorTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginBottom="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_statsPageStatsIconImageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:background="@android:color/black"/>
+
+    <ScrollView
+        android:id="@+id/id_statisticsScrollView"
+        android:layout_width="350dp"
+        android:layout_height="500dp"
+        app:layout_constraintBottom_toTopOf="@+id/id_navigatorTopBar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <NumberPicker
+                android:id="@+id/id_statisticsNumPicker2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginRight="10dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <NumberPicker
+                android:id="@+id/id_statisticsNumPicker1"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="40dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Button
+                android:id="@+id/id_statisticsNumPickerNextButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Next"
+                app:layout_constraintEnd_toStartOf="@+id/id_statisticsNumPicker2"
+                app:layout_constraintStart_toEndOf="@+id/id_statisticsNumPicker1"
+                app:layout_constraintTop_toBottomOf="@+id/id_statisticsNumPicker1" />
+
+            <NumberPicker
+                android:id="@+id/id_statisticsNumPicker3"
+                android:layout_width="250dp"
+                android:layout_height="180dp"
+                android:layout_marginTop="5dp"
+                app:layout_constraintEnd_toEndOf="@+id/id_statisticsNumPickerNextButton"
+                app:layout_constraintStart_toStartOf="@+id/id_statisticsNumPickerNextButton"
+                app:layout_constraintTop_toBottomOf="@+id/id_statisticsnumberPickerCountyTextView" />
+
+            <Button
+                android:id="@+id/id_statisticsNumPickerFinalButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="Get Data"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/id_statisticsNumPicker3" />
+
+            <TextView
+                android:id="@+id/id_statisticsnumberPickerCountyTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:text="Select County:"
+                android:textColor="#000000"
+                app:layout_constraintEnd_toEndOf="@+id/id_statisticsNumPickerNextButton"
+                app:layout_constraintStart_toStartOf="@+id/id_statisticsNumPickerNextButton"
+                app:layout_constraintTop_toBottomOf="@+id/id_statisticsNumPickerNextButton" />
+
+            <TextView
+                android:id="@+id/id_statisticsnumberPickerTimelineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Select Timeline:"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/id_statisticsNumPicker1"
+                app:layout_constraintEnd_toEndOf="@+id/id_statisticsNumPicker1"
+                app:layout_constraintStart_toStartOf="@+id/id_statisticsNumPicker1" />
+
+            <TextView
+                android:id="@+id/id_statisticsnumberPickerStateTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="5dp"
+                android:text="Select State:"
+                android:textColor="#000000"
+                app:layout_constraintBottom_toTopOf="@+id/id_statisticsNumPicker2"
+                app:layout_constraintEnd_toEndOf="@+id/id_statisticsNumPicker2"
+                app:layout_constraintStart_toStartOf="@+id/id_statisticsNumPicker2" />
+
+            <TextView
+                android:id="@+id/id_statisticsDataDisplayTextView"
+                android:layout_width="325dp"
+                android:layout_height="700dp"
+                android:layout_marginTop="25dp"
+                android:background="@drawable/textview_border"
+                android:gravity="center"
+                android:text="Data will appear here."
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="@+id/id_statisticsNumPickerFinalButton"
+                app:layout_constraintStart_toStartOf="@+id/id_statisticsNumPickerFinalButton"
+                app:layout_constraintTop_toBottomOf="@+id/id_statisticsNumPickerFinalButton" />
+
+            <Button
+                android:id="@+id/id_statisticsSaveDataButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Save Data To Favorites"
+                app:layout_constraintEnd_toEndOf="@+id/id_statisticsDataDisplayTextView"
+                app:layout_constraintStart_toStartOf="@+id/id_statisticsDataDisplayTextView"
+                app:layout_constraintTop_toBottomOf="@+id/id_statisticsDataDisplayTextView" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
